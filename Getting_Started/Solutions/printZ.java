@@ -1,5 +1,3 @@
-package Getting_Started.Solutions;
-
 import java.util.*;
 
 public class printZ {
