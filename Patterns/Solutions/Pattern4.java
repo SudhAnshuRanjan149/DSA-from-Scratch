@@ -1,6 +1,8 @@
 package Solutions;
+
 import java.util.*;
-public class Pattern1 {
+
+public class Pattern4 {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
@@ -8,7 +10,13 @@ public class Pattern1 {
         // write ur code here
         int n = scn.nextInt();
         
-        for(int i = 1 ; i <= n; i++){
+        int space = 0;
+        
+        for(int i = n; i > 0; i--){
+            for(int j = 1; j <= space; j++){
+                System.out.print("\t");
+            }
+            space++;
             for(int j = 1; j <= i; j++){
                 System.out.print("*\t");
             }
