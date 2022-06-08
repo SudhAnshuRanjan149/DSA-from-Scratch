@@ -1,3 +1,4 @@
+package Solutions;
 // Questions
 
 // The State Of Wakanda - 1  --> also known as --> Wave traversal of 2D-Array
