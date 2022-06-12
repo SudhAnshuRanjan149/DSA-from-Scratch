@@ -84,6 +84,74 @@ package Solutions;
 // **************************************************************************
 // Solution
 
+import java.io.*;
+import java.util.*;
+
 public class SpiralDisplay {
-	
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        
+        int n = scn.nextInt();
+        int m = scn.nextInt();
+        
+        int [][] arr = new int[n][m];
+        
+        //take input for 2d Array
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < m; j++){
+                arr[i][j] = scn.nextInt();
+            }
+        }
+        
+        spiralDisplayOf2DArray(arr);
+    }
+    
+    public static void spiralDisplayOf2DArray(int [][] a){
+       
+        
+        int imax = a.length-1; 
+        int jmax = a[0].length-1;
+        
+        int imin = 0;
+        int jmin = 0;
+
+        int count = a.length * a[0].length;
+        
+        
+        while(count > 0){
+            
+            //left wall
+            for(int i = imin;i <= imax && count > 0;i++){
+              System.out.println(a[i][jmin]);
+              count--;
+            }
+            jmin++;
+            
+            //bottom wall
+            for(int j = jmin;j <= jmax && count > 0;j++){
+              System.out.println(a[imax][j]);
+              count--;
+            }
+            imax--;
+            
+            //right wall
+            for(int i = imax;i >= imin && count > 0;i--){
+              System.out.println(a[i][jmax]);
+              count--;
+            }
+            jmax--;
+            
+            //top wall
+            for(int j = jmax;j >= jmin && count > 0;j--){
+              System.out.println(a[imin][j]);
+              count--;
+            }
+            imin++;
+          
+        }
+        
+    }
+
 }
