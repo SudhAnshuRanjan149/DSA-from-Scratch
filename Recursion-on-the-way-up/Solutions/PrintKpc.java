@@ -49,8 +49,38 @@
 // Solution
 
 
-
+import java.io.*;
+import java.util.*;
 
 public class PrintKpc {
-	
+
+  public static void main(String[] args) throws Exception {
+
+    Scanner scn = new Scanner(System.in);
+
+    String str = scn.next();
+
+    printKPC(str, "");
+    //678
+
+  }
+
+static String [] arr = {".;", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tu", "vwx", "yz"};
+
+  public static void printKPC(String str, String asf) {
+    if (str.length() == 0) {
+      System.out.println(asf);
+      return;
+    }
+
+    char ch = str.charAt(0);
+    // int a = Character.getNumericValue(ch);
+
+    String roq = str.substring(1);
+
+    for (int i = 0; i < arr[ch- '0'].length(); i++) {
+      char c = arr[ch - '0'].charAt(i);
+      printKPC(roq,asf + c);
+    }
+  }
 }
