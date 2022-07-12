@@ -64,6 +64,8 @@ public class CoinChangeCombination {
 
     int amt = scn.nextInt();
 
+	scn.close();
+
     int [] dp = new int[amt + 1];
 
     dp[0] = 1;
