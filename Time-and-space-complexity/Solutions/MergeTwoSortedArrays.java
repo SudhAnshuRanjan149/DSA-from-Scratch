@@ -52,6 +52,7 @@ import java.util.*;
 public class MergeTwoSortedArrays {
 
 	// Merge Two Sorted Arrays -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+	// Time --> O(n) + O(m) ,l Space --> O(n+m)
 	public static int[] mergeTwoSortedArrays(int[] a, int[] b) {
 		// write your code here
 		int[] c = new int[a.length + b.length];
@@ -82,6 +83,7 @@ public class MergeTwoSortedArrays {
 		}
 		return c;
 	}
+
 	// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 	public static void display(int[] arr) {
 		System.out.print("[ ");
